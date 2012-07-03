@@ -1,4 +1,6 @@
 Skeleton::Application.routes.draw do
+  match ":project/:page" => "html#show"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
