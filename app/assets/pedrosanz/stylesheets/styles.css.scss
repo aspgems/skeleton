@@ -1,0 +1,6 @@
+#main {
+  width: 800px;
+  border: 1px solid black;
+  @import "rounded-corners";
+  @import "drop-shadow";
+}

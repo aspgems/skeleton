@@ -14,5 +14,6 @@ class HtmlController < ApplicationController
 
   def add_project_paths
     prepend_view_path Rails.root.join("app", "assets", @project)
+    Rails.application.config.assets.paths << Rails.root.join("app", "assets", @project)
   end
 end
