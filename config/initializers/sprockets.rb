@@ -31,11 +31,13 @@ module Sprockets
       project_name = path[project_name_re, 1]
       path.gsub! project_name_re, ""
 
-      # add app/assets/<project_name>/stylesheets
-      # and app/assets/<project_name>/javascripts
+      # add app/assets/<project_name>/stylesheets,
+      #     app/assets/<project_name>/javascripts
+      # and app/assets/<project_name>/images
       # to the load_path
       prepend_path File.join("app", "assets", project_name, "stylesheets")
       prepend_path File.join("app", "assets", project_name, "javascripts")
+      prepend_path File.join("app", "assets", project_name, "images")
 
       # MONKEY PATCH end
 
