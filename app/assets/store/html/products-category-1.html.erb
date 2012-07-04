@@ -1,0 +1,7 @@
+<ul id="products">
+  <% 3.times do |i| %>
+    <%= render "products/product", i: i + 1, category: 1 %>
+  <% end %>
+</ul>
+
+<a href="categories">Volver</a>
