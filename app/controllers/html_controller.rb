@@ -3,7 +3,7 @@ class HtmlController < ApplicationController
   before_filter :add_project_paths
 
   def show
-    render params[:page]
+    render template: params[:page]
   end
 
   private
@@ -13,7 +13,7 @@ class HtmlController < ApplicationController
   end
 
   def add_project_paths
-    prepend_view_path Rails.root.join("app", "assets", @project)
+    prepend_view_path Rails.root.join("app", "assets", @project, "html")
     Rails.application.config.assets.prefix = "/assets/#{@project}"
   end
 end

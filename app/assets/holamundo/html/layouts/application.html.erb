@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Layout de la maqueta de PedroSanz</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div id="wrapper">
+  <%= render "shared/header" %>
+  <%= yield %>
+  <%= render "shared/footer" %>
+</div>
+
+</body>
+</html>
