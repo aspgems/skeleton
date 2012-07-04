@@ -1,6 +1,12 @@
-#main {
+@import "compass/css3/border-radius";
+@import "compass/css3/box-shadow";
+
+#wrapper {
   width: 800px;
+  margin: 0 auto;
+  padding: 1em;
   border: 1px solid black;
-  @import "rounded-corners";
-  @import "drop-shadow";
+
+  @include border-radius;
+  @include box-shadow;
 }
