@@ -31,6 +31,13 @@ module Sprockets
       project_name = path[project_name_re, 1]
       path.gsub! project_name_re, ""
 
+      # remove every path under <rails-root>/app/assets/
+      paths_to_keep = paths.reject do |p|
+        p =~ /#{Rails.root.join("app", "assets")}/
+      end
+      clear_paths
+      paths_to_keep.each { |p| append_path p }
+
       # add app/assets/<project_name>/stylesheets,
       #     app/assets/<project_name>/javascripts
       # and app/assets/<project_name>/images
