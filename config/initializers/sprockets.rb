@@ -46,6 +46,8 @@ module Sprockets
       prepend_path File.join("app", "assets", project_name, "javascripts")
       prepend_path File.join("app", "assets", project_name, "images")
 
+      Rails.application.config.assets.prefix = "/assets/#{project_name}"
+
       # MONKEY PATCH end
 
       # Look up the asset.

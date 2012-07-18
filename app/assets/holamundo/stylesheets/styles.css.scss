@@ -9,4 +9,6 @@
 
   @include border-radius;
   @include box-shadow;
+
+  background-image: image-url("logo.jpg")
 }
