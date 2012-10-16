@@ -1,0 +1,19 @@
+<%
+projects = [
+  { name: "hello_world", page: "say_hello" }
+]
+%>
+
+<ul>
+  <% projects.each do |p| %>
+    <li>
+	  <%=
+	    link_to p[:name],
+		        action: "show",
+				project: p[:name],
+				layout: p[:layout] || "application",
+				page: p[:page]
+	  %>
+	</li>
+  <% end %>
+</ul>

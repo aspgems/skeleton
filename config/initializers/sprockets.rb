@@ -1,3 +1,4 @@
+# config/initializers/sprockets.rb
 module Sprockets
   module Server
     def call(env)
@@ -27,13 +28,13 @@ module Sprockets
       # MONKEY PATCH BEGIN
 
       # path is /<project-name>/resource, let's extract <project-name>
-      project_name_re = /^([a-zA-Z0-9_]+)\//
+      project_name_re = /^([a-zA-Z0-9_-]+)\//
       project_name = path[project_name_re, 1]
       path.gsub! project_name_re, ""
 
-      # remove every path under <rails-root>/app/assets/
+      # remove every path under <rails-root>/..
       paths_to_keep = paths.reject do |p|
-        p =~ /#{Rails.root.join("app", "assets")}/
+        p =~ /#{Rails.root.join("..")}/
       end
       clear_paths
       paths_to_keep.each { |p| append_path p }
@@ -42,13 +43,11 @@ module Sprockets
       #     app/assets/<project_name>/javascripts
       # and app/assets/<project_name>/images
       # to the load_path
-      prepend_path File.join("app", "assets", project_name, "stylesheets")
-      prepend_path File.join("app", "assets", project_name, "javascripts")
-      prepend_path File.join("app", "assets", project_name, "images")
+      prepend_path File.join("..", project_name, "Repo", "stylesheets")
+      prepend_path File.join("..", project_name, "Repo", "javascripts")
+      prepend_path File.join("..", project_name, "Repo", "images")
 
-      Rails.application.config.assets.prefix = "/assets/#{project_name}"
-
-      # MONKEY PATCH end
+      # MONKEY PATCH END
 
       # Look up the asset.
       asset = find_asset(path, :bundle => !body_only?(env))

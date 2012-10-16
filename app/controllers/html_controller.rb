@@ -1,9 +1,12 @@
 class HtmlController < ApplicationController
-  before_filter :load_project
-  before_filter :add_project_paths
+  before_filter :load_project, only: :show
+  before_filter :add_project_paths, only: :show
 
-  layout :set_layout
+  layout :layout_param, only: :show
 
+  def index
+  end
+  
   def show
     render template: params[:page]
   end
@@ -15,11 +18,11 @@ class HtmlController < ApplicationController
   end
 
   def add_project_paths
-    prepend_view_path Rails.root.join("app", "assets", @project, "html")
+    prepend_view_path Rails.root.join("..", @project, "Repo", "html")
     Rails.application.config.assets.prefix = "/assets/#{@project}"
   end
-
-  def set_layout
-    params[:layout].presence || "application"
+  
+  def layout_param
+    params[:layout] || "application"
   end
 end
