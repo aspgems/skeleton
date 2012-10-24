@@ -41,11 +41,13 @@ module Sprockets
 
       # add app/assets/<project_name>/stylesheets,
       #     app/assets/<project_name>/javascripts
+      #     app/assets/<project_name>/fonts
       # and app/assets/<project_name>/images
       # to the load_path
       prepend_path File.join("..", project_name, "Repo", "stylesheets")
       prepend_path File.join("..", project_name, "Repo", "javascripts")
       prepend_path File.join("..", project_name, "Repo", "images")
+      prepend_path File.join("..", project_name, "Repo", "fonts")
 
       # MONKEY PATCH END
 
