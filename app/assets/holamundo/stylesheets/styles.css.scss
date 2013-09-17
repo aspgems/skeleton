@@ -12,3 +12,6 @@
 
   background-image: image-url("logo.jpg")
 }
+
+@import "icons/*.png";
+@include all-icons-sprites;
