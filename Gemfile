@@ -10,12 +10,17 @@ gem 'sqlite3'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'foundation-rails'
+
+# Gema foundation v5.2
+  gem 'foundation-rails', '5.2.0'
+
+
+# Gema foundation v5.0
+  #gem 'foundation-rails', '5.0.2'
   
-  
-  #gema foundation v4
+# Gema foundation v4.3
   #gem 'zurb-foundation'
 
 
@@ -30,7 +35,7 @@ end
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
 gem 'lightbox-rails'
-gem 'bootstrap-sass'
+#gem 'bootstrap-sass'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
