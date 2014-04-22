@@ -12,7 +12,17 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'zurb-foundation'
+
+# Gema foundation v5.2
+  gem 'foundation-rails', '5.2.0'
+
+
+# Gema foundation v5.0
+  #gem 'foundation-rails', '5.0.2'
+  
+# Gema foundation v4.3
+  #gem 'zurb-foundation'
+
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
