@@ -12,7 +12,9 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'modernizr-rails'
 
+# gem 'foundation-rails', '5.2.0'
 # Gema foundation v5.3
   gem 'foundation-rails', '5.3.3'
 
