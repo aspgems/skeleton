@@ -12,20 +12,13 @@ gem 'sqlite3'
 group :assets do
   gem 'sass-rails'
   gem 'coffee-rails', '~> 3.2.1'
+  gem 'modernizr-rails'
 
-# Gema foundation v5.2
-  gem 'foundation-rails', '5.2.0'
+# gem 'foundation-rails', '5.2.0'
+# Gema foundation v5.3
+  gem 'foundation-rails', '5.3.3'
 
-# Gema foundation v5.0.3
-  #gem 'foundation-rails', '5.0.3'
-
-
-# Gema foundation v5.0.2
-  #gem 'foundation-rails', '5.0.2'
   
-# Gema foundation v4.3
-  #gem 'zurb-foundation'
-
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
@@ -54,6 +47,3 @@ gem 'lightbox-rails'
 
 # To use debugger
 # gem 'debugger'
-
-
-gem 'modernizr-rails'
