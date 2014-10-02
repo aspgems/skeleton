@@ -54,3 +54,6 @@ gem 'lightbox-rails'
 
 # To use debugger
 # gem 'debugger'
+
+
+gem 'modernizr-rails'
