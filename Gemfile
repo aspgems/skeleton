@@ -7,6 +7,9 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 
+gem 'gintonic-rails', github: 'simplelogica/gintonic-rails', tag: 'v0.0.2'
+gem 'fancybox2-rails', '~> 0.2.4'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -14,9 +17,12 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'modernizr-rails'
 
+
 # gem 'foundation-rails', '5.2.0'
 # Gema foundation v5.3
   gem 'foundation-rails', '5.3.3'
+#esta es la ultima version de sep2014. pendiente de instalacion
+#gem 'foundation-rails', '~> 5.4.5.0'
 
   
 
@@ -27,6 +33,8 @@ group :assets do
 
   gem 'uglifier', '>= 1.0.3'
 end
+
+  
 
 gem 'jquery-rails'
 gem 'jquery-ui-rails'
